@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowUp, ArrowDown, ArrowLeft, ArrowRight, Share2 } from "lucide-react";
-import Share from "@/components/share";
+import { ArrowUp, ArrowDown, ArrowLeft, ArrowRight } from "lucide-react";
+import { Share } from "@/components/share";
 import { url } from "@/lib/metadata";
 
 const SIZE = 4;
@@ -118,7 +118,7 @@ export default function Game2048() {
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [board, gameOver]);
+  }, [board, gameOver, handleMove]);
 
   return (
     <div className="flex flex-col items-center gap-4">
